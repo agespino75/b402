@@ -5,7 +5,7 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 
-chatModel = ChatOpenAI(model="gpt-3.5-turbo-0125")
+chatModel = ChatOpenAI(model="gpt-4o-mini")
 
 from langchain_community.document_loaders import TextLoader
 from langchain_openai import OpenAIEmbeddings

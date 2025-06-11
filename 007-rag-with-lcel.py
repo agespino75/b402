@@ -5,7 +5,7 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 
-chatModel = ChatOpenAI(model="gpt-3.5-turbo-0125")
+chatModel = ChatOpenAI(model="gpt-4o-mini",temperature=0.9)
 
 from langchain_community.document_loaders import TextLoader
 from langchain_openai import OpenAIEmbeddings
@@ -79,7 +79,7 @@ Question: {question}
 
 prompt = ChatPromptTemplate.from_template(template)
 
-model = ChatOpenAI()
+model = ChatOpenAI(model="gpt-4o-mini",temperature=0.0)
 
 def format_docs(docs):
     return "\n\n".join([d.page_content for d in docs])

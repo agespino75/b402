@@ -5,7 +5,8 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 
-chatModel = ChatOpenAI(model="gpt-3.5-turbo-0125")
+chatModel = ChatOpenAI(model="gpt-4o-mini", temperature=0, openai_api_key=openai_api_key)
+print("using model:", chatModel.model_name)
 
 from langchain_community.document_loaders import TextLoader
 
@@ -39,9 +40,9 @@ print("\n----------\n")
 
 from langchain_community.document_loaders import UnstructuredHTMLLoader
 
-loader = UnstructuredHTMLLoader('./data/100-startups.html')
+#loader = UnstructuredHTMLLoader('./data/100-startups.html')
 
-loaded_data = loader.load()
+#loaded_data = loader.load()
 
 print("\n----------\n")
 
@@ -95,6 +96,6 @@ print("\n----------\n")
 print("Respond from Wikipedia: What was the full name of JFK?")
 
 print("\n----------\n")
-#print(response.content)
+print(response.content)
 
 print("\n----------\n")
