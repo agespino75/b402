@@ -64,4 +64,5 @@ print("\n----------\n")
 print(response[0].page_content)
 
 print("\n----------\n")
+print(response)
 
